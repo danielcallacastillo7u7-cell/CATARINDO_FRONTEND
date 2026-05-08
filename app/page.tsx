@@ -17,7 +17,6 @@ async function getProducts() {
     return [];
   }
 }
-
 export default async function Page() {
   const products: Product[] = await getProducts();
 
@@ -35,6 +34,9 @@ export default async function Page() {
               <p className="text-gray-500 text-sm mt-2">ID: {product.id}</p>
             </div>
           ))
+
+
+          
         ) : (
           <p className="col-span-3 text-center text-gray-500">No se encontraron productos o el backend está desconectado.</p>
         )}
