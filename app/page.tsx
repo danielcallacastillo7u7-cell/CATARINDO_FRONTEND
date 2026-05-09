@@ -6,8 +6,6 @@ interface Product {
 
 async function getProducts() {
   const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-  
-  // Agregamos un try/catch por si el backend está apagado
   try {
     const res = await fetch(`${backendUrl}/products`, { cache: 'no-store' });
     if (!res.ok) return [];
